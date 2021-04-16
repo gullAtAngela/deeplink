@@ -292,6 +292,7 @@ class Deeplink
 
 		return 	$this->protocol . 
 				$this->getBaseUrl() .
+				$this->getLanguage() .
 				$this->getTargetPage() .
 				$this->getCampaignType() .
 				$this->getCampaign() .
