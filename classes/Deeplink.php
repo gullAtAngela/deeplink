@@ -103,7 +103,7 @@ class Deeplink
 	public function setTargetPage($targetPage = "")
 	{
 		if (isset($_POST['targetPage'])) {
-			$this->targetPage = $_POST['targetPage'];
+			$this->targetPage = preg_replace("/(http[s]?[:\/\/www.]*)([a-zA-Z-]*)[\.ch\/]*([de|fr]+)[\/]?/", "", $_POST['targetPage']);
 		} else {
 			$this->targetPage = $targetPage;
 		}
